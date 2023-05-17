@@ -29,7 +29,22 @@ function generatePassword() {
 
   var Chars = "";
 
-  
+  // Validating confirm methods
+  if (confirmSpecial) {
+    Chars += specialChars;
+  }
+
+  if (confirmNumbers) {
+    Chars += numberCHARS;
+  }
+
+  if (confirmLowercase) {
+    Chars += lowercaseChars;
+  }
+
+  if (confirmUppercase) {
+    Chars += uppercaseChars;
+  }
 
 
 
