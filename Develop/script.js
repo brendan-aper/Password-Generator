@@ -46,14 +46,13 @@ function generatePassword() {
     Chars += uppercaseChars;
   }
 
-
-
-
-
-
-
-
-  return "generated password will go here"
+  var password = "";
+  for (var i = 0; i < passwordLength; i++) {
+    var randomIndex = Math.floor(Math.random() * Chars.length);
+    password += Chars[randomIndex];
+  }
+  
+  return password;
 }
 
 // Write password to the #password input
