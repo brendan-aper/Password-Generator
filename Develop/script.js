@@ -9,17 +9,47 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
   let userInput = prompt("How many characters would you like your password to contain?")
-  if (userInput < 8 || userInput > 128) {
-    alert("Invalid input, please choose between 8 and 128")
+  if (userInput < 8 || userInput > 128 || userInput == " ") {
+    alert("Invalid input, please choose a number between 8 and 128")
 
-    return ""
-  } 
+    return;
+  }
+
   let confirmSpecial = confirm("Click OK to confirm including special characters.")
-  let confirmNumbers = confirm("Click Ok to confirm including numerical characters.")
-  let confirmLowercase = confirm("Click ok to confirm including lowercase characters.")
-  let confirmUppercase = confirm("Click OK to confirm inlcuding uppercase characters.")
+    if (confirmSpecial == true){
+      confirmSpecial = special
+    }
 
-  
+    console.log(confirmSpecial)
+
+  let confirmNumbers = confirm("Click Ok to confirm including numerical characters.")
+    if (confirmNumbers == true){
+      confirmNumbers = numbers
+    }
+
+  console.log(confirmNumbers)
+
+  let confirmLowercase = confirm("Click ok to confirm including lowercase characters.")
+  if (confirmLowercase == true){
+    confirmLowercase = lowercase
+  }
+
+  console.log(confirmLowercase)
+
+  let confirmUppercase = confirm("Click OK to confirm inlcuding uppercase characters.")
+  if (confirmUppercase == true){
+    confirmUppercase = uppercase
+  }
+
+  console.log(confirmUppercase)
+
+  var passwordArray = [userInput, confirmSpecial, confirmNumbers, confirmLowercase, confirmUppercase];
+  console.log(passwordArray)
+
+
+
+
+
 
   return "generated password will go here"
 }
