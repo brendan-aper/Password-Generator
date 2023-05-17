@@ -13,36 +13,25 @@ function generatePassword() {
     return;
   }
 
-  let confirmSpecial = confirm("Click OK to confirm including special characters.")
-    if (confirmSpecial == true){
-      confirmSpecial = special
-    }
 
-    
+// Confirm methods
+  var confirmSpecial = confirm("Click OK to confirm including special characters.")
+  var confirmNumbers = confirm("Click Ok to confirm including numerical characters.")
+  var confirmLowercase = confirm("Click ok to confirm including lowercase characters.")
+  var confirmUppercase = confirm("Click OK to confirm inlcuding uppercase characters.")
 
-  let confirmNumbers = confirm("Click Ok to confirm including numerical characters.")
-    if (confirmNumbers == true){
-      confirmNumbers = numbers
-    }
 
-  
+// Defined character sets
+  var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+  var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var numberCHARS = "0123456789";
+  var specialChars = "!@#$%^&*()";
 
-  let confirmLowercase = confirm("Click ok to confirm including lowercase characters.")
-  if (confirmLowercase == true){
-    confirmLowercase = lowercase
-  }
+  var Chars = "";
 
   
 
-  let confirmUppercase = confirm("Click OK to confirm inlcuding uppercase characters.")
-  if (confirmUppercase == true){
-    confirmUppercase = uppercase
-  }
 
-  
-
-  var passwordArray = [userInput, confirmSpecial, confirmNumbers, confirmLowercase, confirmUppercase];
-  console.log(passwordArray)
 
 
 
